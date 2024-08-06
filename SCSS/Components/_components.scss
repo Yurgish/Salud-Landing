@@ -1,0 +1,147 @@
+.section-button {
+    text-transform: uppercase;
+
+    color: var(--specific-color);
+    font-family: 'Poppins';
+    letter-spacing: -0.05em;
+    font-weight: 300;
+    font-size: calc(0.48vw + 1rem);
+
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+
+    transition: color 0.2s ease-in-out;
+    transition: stroke 0.2s ease-in-out;
+    transition: margin-left 0.2s ease-in-out;
+    transition: margin-right 0.2s ease-in-out;
+
+    @media (max-width: 1024.9px) {
+        font-size: calc(0.2vw + 1rem);
+    }
+    @media (max-width: 545.9px) {
+        font-size: calc(0.1vw + 1rem);
+    }
+
+    &:hover {
+        color: var(--specific-color);
+
+        svg {
+            stroke: var(--specific-color);
+        }
+
+        &.right {
+            svg {
+                margin-left: 1em;
+            }
+         }
+    
+         &.left {
+            svg {
+                margin-right: 1em;
+            }
+         }
+    }
+
+    svg {
+        stroke: var(--specific-color);
+
+        width: 30px;
+        height: 30px;
+
+        transition: 0.2s ease-in-out;
+
+        @media (max-width: 1024.9px) {
+            width: 25px;
+            height: 25px;
+        }
+
+        @media (max-width: 545.9px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+     &.right {
+        svg {
+            margin-left: 0.8em;
+        }
+     }
+
+     &.left {
+        p {
+            order: 2;
+        }
+        svg {
+            margin-right: 0.8em;
+            transform: rotate(180deg);
+            order: 1;
+        }
+     }
+}
+
+.questions {
+    width: 100%;
+
+    .faq{
+        width: 100%;
+        color: var(--text-color);
+        background-color: var(--main-second-color);
+        font-family: 'GothamBook';
+
+        padding: 1.5rem 2.5rem;
+        padding-bottom: 0rem;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.23);
+        border-radius: 6px;
+
+        transition: padding 0.3s ease-in-out;
+
+        @media(max-width: 768.9px) {
+            padding: 1.5rem 1.5rem;
+            padding-bottom: 0rem;
+        }
+
+        @media(max-width: 545.9px) {
+            padding: 1rem 1rem;
+            padding-bottom: 0rem;
+        }
+
+        &.active {
+            padding-bottom: 1.5rem;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: calc(0.5vw + 1rem);
+            line-height: 120%;
+            padding-bottom: 1.5rem;
+
+            @media(max-width: 768.9px) {
+                font-size: calc(0.3vw + 1rem);
+            }
+            @media(max-width: 545.9px) {
+                padding-bottom: 1rem;
+            }
+        }
+
+        .answer{
+            font-size: calc(0.2vw + 1rem);
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+        }
+    }
+}

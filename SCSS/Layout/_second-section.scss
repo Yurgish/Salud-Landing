@@ -1,0 +1,41 @@
+#section-two {
+    display: none;
+    background-color: var(--light-main-second-color);
+    .section-button {
+        color: var(--light-text-color);
+        svg {
+            stroke: var(--light-text-color);
+        }
+    }
+    .hero {
+        background-color: var(--light-main-second-color);
+        display: flex;
+        align-content: center;
+    }
+    .hero .text {
+        font-family: 'Newake';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(3vw + 1rem);
+        line-height: 100%;
+        
+        color: var(--specific-color-two);
+        
+        text-transform: uppercase;
+
+        padding-bottom: 15rem;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        @media (min-width: 375.9px) {
+            padding-top: 1rem;
+        }
+
+        overflow: auto;
+        // @media (max-width: 545.9px) {
+        //     font-size: calc(2vw + 1rem);
+        // }
+    }
+}

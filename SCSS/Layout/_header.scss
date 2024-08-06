@@ -1,0 +1,102 @@
+header {
+    width: 100%;
+    height: 7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1024.9px) {
+        height: 5rem;
+    }
+    @media (max-width: 545.9px) {
+        height: 4rem;
+        
+    }
+    @media (max-width: 375.9px) {
+        
+    }
+
+    .social-network-button {
+        display: none;
+
+        text-transform: uppercase;
+
+        color: var(--specific-color);
+        font-family: 'Poppins';
+        letter-spacing: -0.05em;
+        font-weight: 300;
+        font-size: calc(0.48vw + 1rem);
+
+        z-index: 20;
+
+        @media (max-width: 768.9px) {
+            display: block;
+        }
+        @media (max-width: 545.9px) {
+            font-size: calc(0.1vw + 1rem);
+        }
+    }
+}
+
+.social-network-bar {
+    display: flex;
+    gap: 1.25rem;
+
+    @media (max-width: 768.9px) {
+        display: none;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 35px;
+        width: 35px;
+
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid var(--specific-color);
+
+        transition: border-color 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+
+        
+
+        @media (max-width: 1024.9px) {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768.9px) {
+            transition: none;
+            svg{
+                transition: none;
+            }
+        }
+
+        &:hover{
+            border-color: var(--specific-color);
+            transform: translateY(1px);
+            svg{
+                fill: var(--specific-color);
+            }
+        }
+
+        svg {
+            width: 26px;
+            height: 26px;
+
+            fill: var(--specific-color);
+            transition: fill 0.2s ease-in-out;
+
+            @media (max-width: 1024.9px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
