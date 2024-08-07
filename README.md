@@ -11,4 +11,4 @@ Salud is a landing page designed to showcase a clean and modern interface. The w
   
 ## Demo
 
-![](https://iili.io/dYyzT5g.gif)
+![](https://github.com/Yurgish/Salud-Landing/blob/main/public/SaludGif.gif)
